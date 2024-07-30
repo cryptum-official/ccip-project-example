@@ -1,3 +1,4 @@
 .env
 storage.json
 node_modules
+logs/
