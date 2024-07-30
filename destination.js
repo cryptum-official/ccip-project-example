@@ -114,13 +114,17 @@ const receiveMessage = async (contractAddress) => {
 
     while (true) {
         console.log(`Waiting new message...`)
-        await delay(30000)
-
         const message = await getLastReceivedMessageDetailsCCIP(contractAddress)
-        if (message.messageId === "0x0000000000000000000000000000000000000000000000000000000000000000") continue;
+        if (message.messageId === "0x0000000000000000000000000000000000000000000000000000000000000000") {
+            await delay(30000)
+            continue
+        };
 
         const message_db = db.get(message.messageId)
-        if (message_db) continue;
+        if (message_db) {
+            await delay(30000)
+            continue;
+        }
 
         console.log(`New message received ${message.messageId}`)
         db.set(message.messageId, message)
