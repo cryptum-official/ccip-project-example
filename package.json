@@ -9,7 +9,7 @@
   "author": "Madureira, Daniel",
   "license": "ISC",
   "dependencies": {
-    "cryptum-sdk": "../cryptum-sdk",
+    "cryptum-sdk": "^0.0.59",
     "dotenv": "^16.4.5",
     "pino": "^9.3.2",
     "pino-pretty": "^11.2.2",
