@@ -22,7 +22,7 @@ const sdk = new CryptumSDK({
     apiKey: API_KEY,
 })
 
-// Generte wallet
+// Generate wallet
 const getWallet = async () => await sdk.wallet.generateWallet({
     protocol: PROTOCOL,
     mnemonic: MNEMONIC
@@ -67,7 +67,7 @@ const createContractCCIP = async () => {
     return contractAddress
 }
 
-const addFound = async (contractAddress, token, amount) => {
+const addFund = async (contractAddress, token, amount) => {
     if (!contractAddress || !token || !amount) throw Error("Arguments contractAddress, token and amount required!")
 
     const wallet = await getWallet()
@@ -138,7 +138,7 @@ if (!function_name) throw Error("Argument required!")
 
 const functions = {
     'create_ccip': createContractCCIP,
-    'add_founds': () => addFound(arguments[1], arguments[2], arguments[3]),
+    'add_funds': () => addFund(arguments[1], arguments[2], arguments[3]),
     'allow_sender': () => allowSender(arguments[1], arguments[2], arguments[3] == "true"),
     'receive_message': () => receiveMessage(arguments[1])
 }

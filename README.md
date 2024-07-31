@@ -66,10 +66,10 @@ const { hash } = await sdk.token.transfer({
 
 ```sh
 # add ETH
-node origin add_founds 0x8688CCA669714C205E6C722d15d7dEF0dE764869 ETH 0.05 
+node origin add_funds 0x8688CCA669714C205E6C722d15d7dEF0dE764869 ETH 0.05 
 
 # add LINK
-node origin add_founds 0x8688CCA669714C205E6C722d15d7dEF0dE764869 0x779877A7B0D9E8603169DdbD7836e478b4624789 10
+node origin add_funds 0x8688CCA669714C205E6C722d15d7dEF0dE764869 0x779877A7B0D9E8603169DdbD7836e478b4624789 10
 ```
 #### Step 4
 
@@ -79,10 +79,10 @@ Repeat steps 2 and 3 on the destination network.
 # create contract
 node destination create_ccip
 # add AVAX
-node destination add_founds 0x791122cc6f94D78289EC737F4cc04ce444292aE1 AVAX 0.2
+node destination add_funds 0x791122cc6f94D78289EC737F4cc04ce444292aE1 AVAX 0.2
 
 # add LINK
-node destination add_founds 0x791122cc6f94D78289EC737F4cc04ce444292aE1 0x0b9d5D9136855f6FEc3c0993feE6E9CE8a297846 10
+node destination add_funds 0x791122cc6f94D78289EC737F4cc04ce444292aE1 0x0b9d5D9136855f6FEc3c0993feE6E9CE8a297846 10
 ```
 
 #### Step 5
