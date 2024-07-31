@@ -101,6 +101,13 @@ const sendMessage = async (senderContractAddress, receiveContractAddress, data, 
     return hash
 }
 
+const getLastSendedMessageDetailsCCIP = async (contractAddress) => {
+    return await sdk.chainlink.getLastSendMessageDetailsCCIP({
+        protocol: PROTOCOL,
+        address: contractAddress
+    })
+}
+
 const arguments = process.argv.slice(2)
 const [function_name] = arguments;
 
@@ -110,6 +117,7 @@ const functions = {
     'create_ccip': createContractCCIP,
     'add_founds': () => addFound(arguments[1], arguments[2], arguments[3]),
     'send_message': () => sendMessage(arguments[1], arguments[2], arguments[3], arguments[4] == "true"),
+    'last_message' : () => getLastSendedMessageDetailsCCIP(arguments[1])
 }
 
 const method = functions[function_name]

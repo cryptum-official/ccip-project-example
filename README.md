@@ -146,3 +146,17 @@ const message = await sdk.chainlink.getLastReceivedMessageDetailsCCIP({
 ```sh
 node destination receive_message 0x791122cc6f94D78289EC737F4cc04ce444292aE1
 ```
+Você também pode conferir a última mensagem enviada no contrade de origem.
+
+```js
+const getLastSendedMessageDetailsCCIP = async (contractAddress) => {
+    return await sdk.chainlink.getLastSendMessageDetailsCCIP({
+        protocol: PROTOCOL,
+        address: contractAddress
+    })
+}
+```
+
+```sh
+node origin last_message 0x8688CCA669714C205E6C722d15d7dEF0dE764869
+```
