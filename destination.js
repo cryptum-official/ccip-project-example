@@ -140,7 +140,8 @@ const functions = {
     'create_ccip': createContractCCIP,
     'add_funds': () => addFund(arguments[1], arguments[2], arguments[3]),
     'allow_sender': () => allowSender(arguments[1], arguments[2], arguments[3] == "true"),
-    'receive_message': () => receiveMessage(arguments[1])
+    'receive_message': () => receiveMessage(arguments[1]),
+    'last_received_message': () => getLastReceivedMessageDetailsCCIP(arguments[1])
 }
 
 const method = functions[function_name]
