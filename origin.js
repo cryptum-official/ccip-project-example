@@ -92,7 +92,9 @@ const sendMessage = async (senderContractAddress, receiveContractAddress, data, 
         payLink,
         text: data,
         contractAddress: senderContractAddress,
-        to: receiveContractAddress
+        to: receiveContractAddress,
+        // tokenAddress: '0xFd57b4ddBf88a4e07fF4e34C487b99af2Fe82a05', // CCIP-BnM
+        // amount: '0.2'
     })
 
     logger.info({ hash, call_method: function_name, senderContractAddress, receiveContractAddress, data, payLink, protocol: PROTOCOL, destinationProtocol: process.env.PROTOCOL_DESTINATION })
